@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Supermarket Billing System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🛒 Supermarket Billing System</h1>
+
+        <div class="form-box">
+            <h2>Add Product</h2>
+
+            <label>Product Name:</label>
+            <input type="text" id="productName" placeholder="Enter product name">
+
+            <label>Price:</label>
+            <input type="number" id="price" placeholder="Enter price">
+
+            <label>Quantity:</label>
+            <input type="number" id="quantity" placeholder="Enter quantity">
+
+            <button onclick="addProduct()">Add Product</button>
+
+            <p id="error"></p>
+        </div>
+
+        <div class="bill-box">
+            <h2>Bill</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+
+                <tbody id="billTable">
+                </tbody>
+            </table>
+
+            <h3>Grand Total: ₹<span id="grandTotal">0.00</span></h3>
+
+            <button onclick="showJSON()">Show Bill Data</button>
+
+            <h2>Bill Data</h2>
+            <pre id="jsonData"></pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
